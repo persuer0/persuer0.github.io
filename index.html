@@ -22,7 +22,7 @@
     <!-- 导航栏 -->
     <nav id="navbar" class="navbar">
       <div class="nav-inner">
-        <a href="#hero" class="nav-logo">Portfolio</a>
+        <a href="#hero" class="nav-logo">Personal Information</a>
         <div class="nav-links">
           <a href="#about" class="nav-link">个人简介</a>
           <a href="#competition" class="nav-link">竞赛成果</a>
@@ -38,13 +38,13 @@
     <!-- ==================== Hero ==================== -->
     <section id="hero" class="hero-section">
       <div class="container">
-        <div class="hero-badge">🎓 2026 研究生申请</div>
+        <div class="hero-badge"></div>
         <h1 class="hero-title">
-          <span class="hero-name">你的姓名</span>
+          <span class="hero-name">殷孟浩 Yin Menghao</span>
         </h1>
         <p class="hero-subtitle">
-          计算机科学 · 人工智能方向<br>
-          致力于探索前沿技术，追求学术卓越
+          终身学习，知行合一<br>
+          在当下学习具身智能是一件非常有意义的事情，我非常荣幸能见证到一个领域的火热，也很期待能在这个领域发光发热
         </p>
         <div class="hero-buttons">
           <a href="#about" class="btn btn-primary">了解更多</a>
@@ -73,16 +73,17 @@
             </div>
           </div>
           <div class="about-content">
-            <h3 class="about-name">你的姓名</h3>
-            <p class="about-tagline">XX大学 · 计算机科学与技术专业 · 2026届本科生</p>
+            <h3 class="about-name">殷孟浩 YinMenghao</h3>
+            <p class="about-tagline">本科背景：武汉理工大学2022级-测控技术与仪器（卓越工程师班）</p>
             <p class="about-bio">
-              在这里写一段关于你自己的介绍。包括你的学术背景、研究兴趣、
-              技术能力以及你为什么选择这个研究方向。让导师快速了解你是谁，
-              你的热情所在，以及你能为研究团队带来什么。
+              我是<strong>武汉理工大学2022级测控技术与仪器（卓越工程师班）</strong>的本科生，
+              对<strong>具身智能</strong>和<strong>VLA（Vision-Language-Action）模型</strong>有浓厚的研究兴趣。
+              我热衷于将前沿AI技术应用于真实物理世界中的机器人操作任务。
             </p>
             <p class="about-bio">
-              在本科期间，我参与了多个研究项目和竞赛，积累了丰富的实践经验。
-              同时，通过两段实习经历，我深入了解了工业界的前沿技术应用。
+              本科期间，我通过<strong>竞赛积累</strong>和<strong>企业实习</strong>建立了扎实的工程实践能力，
+              尤其在<strong>VLA模型训推部署</strong>、<strong>Policy复现</strong>以及<strong>真机平台验证</strong>方面
+              积累了丰富的一线经验。
             </p>
 
             <div class="contact-cards">
@@ -90,21 +91,21 @@
                 <span class="contact-icon">📧</span>
                 <div>
                   <span class="contact-label">邮箱</span>
-                  <span class="contact-value">your.email@example.com</span>
+                  <span class="contact-value">13733627019@163.com</span>
                 </div>
               </div>
               <div class="contact-card">
                 <span class="contact-icon">📱</span>
                 <div>
                   <span class="contact-label">电话</span>
-                  <span class="contact-value">+86 138-xxxx-xxxx</span>
+                  <span class="contact-value">+86 13733627019</span>
                 </div>
               </div>
               <div class="contact-card">
                 <span class="contact-icon">🔗</span>
                 <div>
                   <span class="contact-label">GitHub</span>
-                  <span class="contact-value">github.com/yourusername</span>
+                  <span class="contact-value">github.com/yinmenghao</span>
                 </div>
               </div>
             </div>
@@ -347,14 +348,26 @@
           <div class="internship-header">
             <div class="internship-icon">2</div>
             <div>
-              <h3 class="internship-company">XX公司 / 实验室</h3>
-              <p class="internship-meta">研究实习生 · 2024.07 - 2024.10</p>
+              <h3 class="internship-company">远行光年科技有限公司 / 研发部</h3>
+              <p class="internship-meta">AI算法实习生 · 2026.01.01 - 至今</p>
             </div>
           </div>
-          <p class="internship-desc">
-            在这里描述你的第二段实习经历。包括你的主要工作内容、
-            负责的项目、使用的技术栈以及取得的成果。
-          </p>
+          <div class="internship-desc">
+            <p style="margin-bottom:12px;">
+              在公司研发部作为AI算法实习生参与工作，工作内容涵盖<strong>遥操数据采集</strong>、<strong>VLA项目独立复现</strong>、<strong>模型训推与真机部署</strong>、<strong>Policy对比实验</strong>及<strong>算法优化</strong>等。
+            </p>
+            <p style="margin-bottom:8px;"><strong>🤖 VLA模型：</strong>选用两个主流且真机效果优秀的VLA模型，从<strong>数据采集 → 模型训推 →
+                真机部署</strong>全流程独立完成，<strong>任务成功率90%以上</strong>（每20次测试）。已成功部署到真机平台 <strong>Franka Research 3</strong>
+              的项目：<strong>Isaac-GR00T</strong>、<strong>Openpi-pi0.5</strong></p>
+            <p style="margin-bottom:8px;"><strong>🧠 Policy复现：</strong>独立复现了多个论文效果优秀的轻量级
+              Policy——<strong>DiffusionPolicy</strong>、<strong>VITA</strong>、<strong>ManiFlow</strong>（DP依赖mentor现有工程复现作为入门，其余均独自完成）
+            </p>
+            <p style="margin-bottom:8px;"><strong>🌐 WAM：</strong>复现了 NVIDIA 的 <strong>DreamZero</strong>，直接部署在真机平台测试
+              <strong>zero-shot 效果</strong>和 <strong>LoRA 微调后效果</strong></p>
+            <p><strong>🔧
+                其他：</strong>复现了多个提升模型<strong>快、准、稳</strong>性能的项目：<strong>Aimbot</strong>、<strong>OBEYED_VLA</strong>、<strong>Dexbotic</strong>、<strong>starVLA</strong>
+            </p>
+          </div>
           <div class="video-grid">
             <div class="video-card">
               <div class="video-wrapper">
@@ -364,7 +377,7 @@
               </div>
               <div class="video-info">
                 <h4 class="video-title">项目演示 5</h4>
-                <p class="video-desc">项目简要描述</p>
+                <p class="video-desc">插笔筒任务，把桌面上的笔插到笔筒内</p>
               </div>
             </div>
             <div class="video-card">
@@ -375,7 +388,7 @@
               </div>
               <div class="video-info">
                 <h4 class="video-title">项目演示 6</h4>
-                <p class="video-desc">项目简要描述</p>
+                <p class="video-desc">叠碗任务，把桌面上的碗叠在一起</p>
               </div>
             </div>
             <div class="video-card">
@@ -386,7 +399,7 @@
               </div>
               <div class="video-info">
                 <h4 class="video-title">项目演示 7</h4>
-                <p class="video-desc">项目简要描述</p>
+                <p class="video-desc">放手机任务，把手机放在手机支架上</p>
               </div>
             </div>
             <div class="video-card">
@@ -397,7 +410,7 @@
               </div>
               <div class="video-info">
                 <h4 class="video-title">项目演示 8</h4>
-                <p class="video-desc">项目简要描述</p>
+                <p class="video-desc">传送带夹物体任务，从移动的传送带上夹取随机出现的物块</p>
               </div>
             </div>
           </div>
@@ -418,9 +431,10 @@
           <div class="research-intro">
             <h3 class="subsection-title">🔬 研究方向概述</h3>
             <p class="research-text">
-              在这里描述你的研究兴趣和方向。说明你希望在研究生期间
-              深入研究的具体问题，以及你对该领域的理解和思考。
-              展示你的学术热情和对前沿问题的洞察。
+              经过这两个多月的关键实习，我对VLA的研究深深产生了兴趣，尤其是当下VLA模型虽然有了一定的智能性但仍有大量进步空间的现况，能看到自己对这项技术有所贡献的希望。
+              我认为在当下具身智能非常火的时代，研究VLA不断推动他的各方面性能是一件很有挑战也很有意义的事，很有可能会在短短几年内
+              能看到VLA或者其他技术路线真正完美部署到真实物理世界中，并且具备“人”一样的智能性。
+              我对VLA模型的模型加速、泛化性提升、架构改进等工作中都很感兴趣，研究生阶段也非常想参与相关工作。
             </p>
           </div>
 
@@ -433,27 +447,23 @@
           </div>
 
           <div class="research-goals">
-            <h3 class="subsection-title">🎯 研究生期间目标</h3>
+            <h3 class="subsection-title">🎯 研究生期间目标（两年制）</h3>
             <div class="goals-timeline">
               <div class="goal-item">
                 <div class="goal-phase">第一年</div>
                 <div class="goal-content">
-                  <h4>基础夯实阶段</h4>
-                  <p>深入学习相关理论知识，完成课程学习，阅读前沿文献，确定具体研究课题方向。</p>
+                  <h4>基础夯实 + 核心研究启动</h4>
+                  <p>
+                    完成研究生课程学习，深入阅读VLA及具身智能领域前沿文献，<strong>确定具体研究课题方向</strong>。同步开展初步实验，快速迭代研究思路，争取<strong>产出1篇高质量论文</strong>。
+                  </p>
                 </div>
               </div>
               <div class="goal-item">
                 <div class="goal-phase">第二年</div>
                 <div class="goal-content">
-                  <h4>核心研究阶段</h4>
-                  <p>开展核心研究工作，完成实验设计与实施，争取发表1-2篇高质量论文。</p>
-                </div>
-              </div>
-              <div class="goal-item">
-                <div class="goal-phase">第三年</div>
-                <div class="goal-content">
-                  <h4>成果总结阶段</h4>
-                  <p>整合研究成果，完成毕业论文撰写，参加学术会议进行成果展示。</p>
+                  <h4>深度研究 + 成果总结</h4>
+                  <p>聚焦核心研究问题，完成实验验证与算法优化，争取<strong>再发表1篇论文</strong>。整合全部研究成果，完成<strong>毕业论文撰写</strong>，参加学术会议进行成果展示。
+                  </p>
                 </div>
               </div>
             </div>
@@ -465,7 +475,7 @@
     <!-- ==================== Footer ==================== -->
     <footer class="footer">
       <div class="container">
-        <p class="footer-text">© 2026 你的姓名 · 个人学术作品集</p>
+        <p class="footer-text">© 2026 殷孟浩 · 个人学术作品集</p>
         <p class="footer-sub">本站仅供学术交流使用</p>
       </div>
     </footer>
@@ -479,6 +489,31 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script>
+    // 自动为所有视频提取第一帧作为封面
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('video').forEach(function (video) {
+        // 跳过已有poster的视频
+        if (video.poster && video.poster !== '' && !video.poster.endsWith('/')) return;
+
+        video.preload = 'metadata';
+
+        video.addEventListener('loadeddata', function () {
+          // 在视频加载后capture第一帧
+          try {
+            var canvas = document.createElement('canvas');
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            video.poster = canvas.toDataURL('image/jpeg', 0.8);
+          } catch (e) {
+            // 跨域或其他错误时静默忽略
+          }
+        }, { once: true });
+      });
+    });
+  </script>
 </body>
 
 </html>

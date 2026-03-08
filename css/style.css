@@ -104,8 +104,8 @@ a {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
+    radial-gradient(ellipse at 20% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
 }
 
 .gate-card {
@@ -127,6 +127,7 @@ a {
     opacity: 0;
     transform: translateY(30px) scale(0.96);
   }
+
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
@@ -212,10 +213,23 @@ a {
 }
 
 @keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  25% { transform: translateX(-8px); }
-  50% { transform: translateX(8px); }
-  75% { transform: translateX(-4px); }
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-8px);
+  }
+
+  50% {
+    transform: translateX(8px);
+  }
+
+  75% {
+    transform: translateX(-4px);
+  }
 }
 
 /* ============================================
@@ -236,7 +250,7 @@ a {
 
 .navbar.scrolled {
   border-bottom-color: var(--border);
-  box-shadow: 0 1px 12px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.04);
 }
 
 .nav-inner {
@@ -424,8 +438,13 @@ a {
 }
 
 @keyframes scrollDown {
-  0% { top: -50%; }
-  100% { top: 100%; }
+  0% {
+    top: -50%;
+  }
+
+  100% {
+    top: 100%;
+  }
 }
 
 @keyframes fadeInUp {
@@ -433,6 +452,7 @@ a {
     opacity: 0;
     transform: translateY(24px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -818,6 +838,18 @@ a {
   padding-left: 68px;
 }
 
+.internship-desc p {
+  line-height: 1.85;
+}
+
+.internship-desc strong,
+.about-bio strong,
+.research-text strong,
+.goal-content strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 /* ============================================
    Research Plan
    ============================================ */
@@ -982,7 +1014,7 @@ a {
   max-height: 90vh;
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
 }
 
 .lightbox-close {
@@ -992,7 +1024,7 @@ a {
   width: 44px;
   height: 44px;
   border: none;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   color: #fff;
   font-size: 1.2rem;
   border-radius: 50%;
@@ -1001,7 +1033,7 @@ a {
 }
 
 .lightbox-close:hover {
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* ============================================
