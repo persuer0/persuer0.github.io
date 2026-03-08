@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人学术作品集 — Portfolio</title>
+  <meta name="description" content="个人学术作品集，展示竞赛成果、实习经历与研究计划">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== 密码门控 ==================== -->
+  <div id="password-gate" class="gate-overlay">
+    <div class="gate-bg"></div>
+    <div class="gate-card">
+      <div class="gate-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      </div>
+      <h2 class="gate-title">访问验证</h2>
+      <p class="gate-subtitle">请输入访问密码以查看作品集内容</p>
+      <div class="gate-input-wrapper">
+        <input type="password" id="password-input" class="gate-input" placeholder="请输入密码" autocomplete="off">
+        <button id="password-submit" class="gate-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+      <p id="password-error" class="gate-error"></p>
+    </div>
+  </div>
+
+  <!-- ==================== 主内容（初始隐藏） ==================== -->
+  <div id="main-content" class="main-content hidden">
+
+    <!-- 导航栏 -->
+    <nav id="navbar" class="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">Portfolio</a>
+        <div class="nav-links">
+          <a href="#about" class="nav-link">个人简介</a>
+          <a href="#competition" class="nav-link">竞赛成果</a>
+          <a href="#internship" class="nav-link">实习经历</a>
+          <a href="#research" class="nav-link">研究计划</a>
+        </div>
+        <button id="nav-toggle" class="nav-toggle" aria-label="菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ==================== Hero ==================== -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-badge">🎓 2026 研究生申请</div>
+        <h1 class="hero-title">
+          <span class="hero-name">你的姓名</span>
+        </h1>
+        <p class="hero-subtitle">
+          计算机科学 · 人工智能方向<br>
+          致力于探索前沿技术，追求学术卓越
+        </p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn btn-primary">了解更多</a>
+          <a href="#competition" class="btn btn-outline">查看作品</a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ==================== 个人简介 ==================== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">01</span>
+          <h2 class="section-title">个人简介</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-avatar-wrapper">
+            <div class="about-avatar">
+              <img src="images/avatar.jpg" alt="个人照片" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>头像</div>'">
+            </div>
+          </div>
+          <div class="about-content">
+            <h3 class="about-name">你的姓名</h3>
+            <p class="about-tagline">XX大学 · 计算机科学与技术专业 · 2026届本科生</p>
+            <p class="about-bio">
+              在这里写一段关于你自己的介绍。包括你的学术背景、研究兴趣、
+              技术能力以及你为什么选择这个研究方向。让导师快速了解你是谁，
+              你的热情所在，以及你能为研究团队带来什么。
+            </p>
+            <p class="about-bio">
+              在本科期间，我参与了多个研究项目和竞赛，积累了丰富的实践经验。
+              同时，通过两段实习经历，我深入了解了工业界的前沿技术应用。
+            </p>
+
+            <div class="contact-cards">
+              <div class="contact-card">
+                <span class="contact-icon">📧</span>
+                <div>
+                  <span class="contact-label">邮箱</span>
+                  <span class="contact-value">your.email@example.com</span>
+                </div>
+              </div>
+              <div class="contact-card">
+                <span class="contact-icon">📱</span>
+                <div>
+                  <span class="contact-label">电话</span>
+                  <span class="contact-value">+86 138-xxxx-xxxx</span>
+                </div>
+              </div>
+              <div class="contact-card">
+                <span class="contact-icon">🔗</span>
+                <div>
+                  <span class="contact-label">GitHub</span>
+                  <span class="contact-value">github.com/yourusername</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 竞赛成果 ==================== -->
+    <section id="competition" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <h2 class="section-title">竞赛成果</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- 奖项列表 -->
+        <div class="awards-section">
+          <h3 class="subsection-title">🏆 获奖情况</h3>
+          <div class="awards-grid">
+            <div class="award-card">
+              <div class="award-badge gold">金奖</div>
+              <h4 class="award-name">XX竞赛名称</h4>
+              <p class="award-detail">2025年 · 全国总决赛</p>
+            </div>
+            <div class="award-card">
+              <div class="award-badge silver">银奖</div>
+              <h4 class="award-name">XX竞赛名称</h4>
+              <p class="award-detail">2024年 · 省级选拔赛</p>
+            </div>
+            <div class="award-card">
+              <div class="award-badge bronze">一等奖</div>
+              <h4 class="award-name">XX竞赛名称</h4>
+              <p class="award-detail">2024年 · 校级竞赛</p>
+            </div>
+            <div class="award-card">
+              <div class="award-badge special">最佳创新</div>
+              <h4 class="award-name">XX竞赛名称</h4>
+              <p class="award-detail">2023年 · 创新创业大赛</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 竞赛奖状图片 -->
+        <div class="awards-gallery">
+          <h3 class="subsection-title">📜 奖状展示</h3>
+          <p class="subsection-hint">点击图片可放大查看</p>
+          <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/awards/award1.jpg" alt="奖状1" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 1</text></svg>'">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/awards/award2.jpg" alt="奖状2" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 2</text></svg>'">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/awards/award3.jpg" alt="奖状3" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 3</text></svg>'">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/awards/award4.jpg" alt="奖状4" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 4</text></svg>'">
+            </div>
+          </div>
+        </div>
+
+        <!-- 竞赛视频 -->
+        <div class="videos-section">
+          <h3 class="subsection-title">🎬 竞赛作品演示</h3>
+          <div class="video-grid">
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata" poster="">
+                  <source src="videos/competition/comp1.mp4" type="video/mp4">
+                  您的浏览器不支持视频播放
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">竞赛作品 1</h4>
+                <p class="video-desc">作品简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/competition/comp2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">竞赛作品 2</h4>
+                <p class="video-desc">作品简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/competition/comp3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">竞赛作品 3</h4>
+                <p class="video-desc">作品简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/competition/comp4.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">竞赛作品 4</h4>
+                <p class="video-desc">作品简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/competition/comp5.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">竞赛作品 5</h4>
+                <p class="video-desc">作品简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/competition/comp6.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">竞赛作品 6</h4>
+                <p class="video-desc">作品简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/competition/comp7.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">竞赛作品 7</h4>
+                <p class="video-desc">作品简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/competition/comp8.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">竞赛作品 8</h4>
+                <p class="video-desc">作品简要描述</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 实习经历 ==================== -->
+    <section id="internship" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">03</span>
+          <h2 class="section-title">实习经历</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- 实习 1 -->
+        <div class="internship-block">
+          <div class="internship-header">
+            <div class="internship-icon">1</div>
+            <div>
+              <h3 class="internship-company">XX公司 / 研究院</h3>
+              <p class="internship-meta">算法工程师实习 · 2025.06 - 2025.09</p>
+            </div>
+          </div>
+          <p class="internship-desc">
+            在这里描述你的第一段实习经历。包括你的主要工作内容、
+            负责的项目、使用的技术栈以及取得的成果。
+            突出你的贡献和学到的技能。
+          </p>
+          <div class="video-grid">
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/internship/intern1_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">项目演示 1</h4>
+                <p class="video-desc">项目简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/internship/intern1_2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">项目演示 2</h4>
+                <p class="video-desc">项目简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/internship/intern1_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">项目演示 3</h4>
+                <p class="video-desc">项目简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/internship/intern1_4.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">项目演示 4</h4>
+                <p class="video-desc">项目简要描述</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 实习 2 -->
+        <div class="internship-block">
+          <div class="internship-header">
+            <div class="internship-icon">2</div>
+            <div>
+              <h3 class="internship-company">XX公司 / 实验室</h3>
+              <p class="internship-meta">研究实习生 · 2024.07 - 2024.10</p>
+            </div>
+          </div>
+          <p class="internship-desc">
+            在这里描述你的第二段实习经历。包括你的主要工作内容、
+            负责的项目、使用的技术栈以及取得的成果。
+          </p>
+          <div class="video-grid">
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/internship/intern2_1.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">项目演示 5</h4>
+                <p class="video-desc">项目简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/internship/intern2_2.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">项目演示 6</h4>
+                <p class="video-desc">项目简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/internship/intern2_3.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">项目演示 7</h4>
+                <p class="video-desc">项目简要描述</p>
+              </div>
+            </div>
+            <div class="video-card">
+              <div class="video-wrapper">
+                <video controls preload="metadata">
+                  <source src="videos/internship/intern2_4.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="video-info">
+                <h4 class="video-title">项目演示 8</h4>
+                <p class="video-desc">项目简要描述</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 研究计划 ==================== -->
+    <section id="research" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">04</span>
+          <h2 class="section-title">研究计划</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="research-content">
+          <div class="research-intro">
+            <h3 class="subsection-title">🔬 研究方向概述</h3>
+            <p class="research-text">
+              在这里描述你的研究兴趣和方向。说明你希望在研究生期间
+              深入研究的具体问题，以及你对该领域的理解和思考。
+              展示你的学术热情和对前沿问题的洞察。
+            </p>
+          </div>
+
+          <div class="research-plan">
+            <h3 class="subsection-title">📋 研究规划路线</h3>
+            <div class="research-image-wrapper">
+              <img src="images/research/flowchart.png" alt="研究计划流程图" class="research-image" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><p>📊 研究计划流程图</p><p class=\'placeholder-hint\'>请将流程图放入 images/research/flowchart.png</p></div>'">
+            </div>
+          </div>
+
+          <div class="research-goals">
+            <h3 class="subsection-title">🎯 研究生期间目标</h3>
+            <div class="goals-timeline">
+              <div class="goal-item">
+                <div class="goal-phase">第一年</div>
+                <div class="goal-content">
+                  <h4>基础夯实阶段</h4>
+                  <p>深入学习相关理论知识，完成课程学习，阅读前沿文献，确定具体研究课题方向。</p>
+                </div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-phase">第二年</div>
+                <div class="goal-content">
+                  <h4>核心研究阶段</h4>
+                  <p>开展核心研究工作，完成实验设计与实施，争取发表1-2篇高质量论文。</p>
+                </div>
+              </div>
+              <div class="goal-item">
+                <div class="goal-phase">第三年</div>
+                <div class="goal-content">
+                  <h4>成果总结阶段</h4>
+                  <p>整合研究成果，完成毕业论文撰写，参加学术会议进行成果展示。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Footer ==================== -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-text">© 2026 你的姓名 · 个人学术作品集</p>
+        <p class="footer-sub">本站仅供学术交流使用</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- 图片 Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
