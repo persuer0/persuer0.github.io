@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,16 @@
   <meta name="description" content="个人学术作品集，展示竞赛成果、实习经历与研究计划">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- ==================== 密码门控 ==================== -->
-  <div id="password-gate" class="gate-overlay">
-    <div class="gate-bg"></div>
-    <div class="gate-card">
-      <div class="gate-icon">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-        </svg>
-      </div>
-      <h2 class="gate-title">访问验证</h2>
-      <p class="gate-subtitle">请输入访问密码以查看作品集内容</p>
-      <div class="gate-input-wrapper">
-        <input type="password" id="password-input" class="gate-input" placeholder="请输入密码" autocomplete="off">
-        <button id="password-submit" class="gate-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </button>
-      </div>
-      <p id="password-error" class="gate-error"></p>
-    </div>
-  </div>
-
-  <!-- ==================== 主内容（初始隐藏） ==================== -->
-  <div id="main-content" class="main-content hidden">
+  <!-- ==================== 主内容 ==================== -->
+  <div id="main-content" class="main-content">
 
     <!-- 导航栏 -->
     <nav id="navbar" class="navbar">
@@ -88,7 +68,8 @@
         <div class="about-grid">
           <div class="about-avatar-wrapper">
             <div class="about-avatar">
-              <img src="images/avatar.jpg" alt="个人照片" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>头像</div>'">
+              <img src="images/avatar.jpg" alt="个人照片"
+                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>头像</div>'">
             </div>
           </div>
           <div class="about-content">
@@ -174,16 +155,20 @@
           <p class="subsection-hint">点击图片可放大查看</p>
           <div class="gallery-grid">
             <div class="gallery-item" onclick="openLightbox(this)">
-              <img src="images/awards/award1.jpg" alt="奖状1" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 1</text></svg>'">
+              <img src="images/awards/award1.jpg" alt="奖状1"
+                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 1</text></svg>'">
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-              <img src="images/awards/award2.jpg" alt="奖状2" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 2</text></svg>'">
+              <img src="images/awards/award2.jpg" alt="奖状2"
+                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 2</text></svg>'">
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-              <img src="images/awards/award3.jpg" alt="奖状3" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 3</text></svg>'">
+              <img src="images/awards/award3.jpg" alt="奖状3"
+                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 3</text></svg>'">
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-              <img src="images/awards/award4.jpg" alt="奖状4" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 4</text></svg>'">
+              <img src="images/awards/award4.jpg" alt="奖状4"
+                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 4</text></svg>'">
             </div>
           </div>
         </div>
@@ -442,7 +427,8 @@
           <div class="research-plan">
             <h3 class="subsection-title">📋 研究规划路线</h3>
             <div class="research-image-wrapper">
-              <img src="images/research/flowchart.png" alt="研究计划流程图" class="research-image" onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><p>📊 研究计划流程图</p><p class=\'placeholder-hint\'>请将流程图放入 images/research/flowchart.png</p></div>'">
+              <img src="images/research/flowchart.png" alt="研究计划流程图" class="research-image"
+                onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><p>📊 研究计划流程图</p><p class=\'placeholder-hint\'>请将流程图放入 images/research/flowchart.png</p></div>'">
             </div>
           </div>
 
@@ -494,4 +480,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

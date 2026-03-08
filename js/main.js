@@ -3,84 +3,6 @@
    ============================================ */
 
 // ==========================================
-// 配置 — 在此修改密码
-// ==========================================
-const CONFIG = {
-  // 🔑 修改此处设置你的访问密码
-  password: 'portfolio2026',
-};
-
-// ==========================================
-// 密码门控
-// ==========================================
-const gate = document.getElementById('password-gate');
-const mainContent = document.getElementById('main-content');
-const passwordInput = document.getElementById('password-input');
-const passwordSubmit = document.getElementById('password-submit');
-const passwordError = document.getElementById('password-error');
-
-function checkPassword() {
-  const input = passwordInput.value.trim();
-
-  if (!input) {
-    showError('请输入密码');
-    shakeInput();
-    return;
-  }
-
-  if (input === CONFIG.password) {
-    // 密码正确 — 解锁
-    gate.classList.add('fade-out');
-    mainContent.classList.remove('hidden');
-    document.body.style.overflow = 'auto';
-
-    // 保存到 sessionStorage（刷新前有效）
-    sessionStorage.setItem('auth', 'true');
-
-    // 移除门控 DOM
-    setTimeout(() => {
-      gate.remove();
-      initScrollAnimations();
-    }, 600);
-  } else {
-    showError('密码错误，请重试');
-    shakeInput();
-    passwordInput.value = '';
-    passwordInput.focus();
-  }
-}
-
-function showError(msg) {
-  passwordError.textContent = msg;
-  setTimeout(() => {
-    passwordError.textContent = '';
-  }, 3000);
-}
-
-function shakeInput() {
-  passwordInput.classList.add('shake');
-  setTimeout(() => passwordInput.classList.remove('shake'), 500);
-}
-
-// 事件绑定
-passwordSubmit.addEventListener('click', checkPassword);
-passwordInput.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter') checkPassword();
-});
-
-// 检查 session 是否已认证
-if (sessionStorage.getItem('auth') === 'true') {
-  gate.remove();
-  mainContent.classList.remove('hidden');
-  document.body.style.overflow = 'auto';
-  // 延迟初始化滚动动画
-  requestAnimationFrame(() => initScrollAnimations());
-} else {
-  document.body.style.overflow = 'hidden';
-  passwordInput.focus();
-}
-
-// ==========================================
 // 导航栏
 // ==========================================
 const navbar = document.getElementById('navbar');
@@ -161,6 +83,9 @@ function initScrollAnimations() {
   elements.forEach(el => observer.observe(el));
 }
 
+// 页面加载后初始化动画
+requestAnimationFrame(() => initScrollAnimations());
+
 // ==========================================
 // Lightbox（图片放大查看）
 // ==========================================
@@ -190,7 +115,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ==========================================
-// 平滑滚动 polyfill (for Safari)
+// 平滑滚动
 // ==========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
