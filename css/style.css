@@ -622,6 +622,81 @@ a {
 }
 
 /* ============================================
+   English Proficiency
+   ============================================ */
+.english-section {
+  margin-top: 32px;
+}
+
+.english-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.english-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  max-width: 600px;
+}
+
+.english-card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.english-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: transparent;
+}
+
+.english-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 220px;
+  min-height: 100px;
+  object-fit: cover;
+}
+
+.english-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 12px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(27, 73, 101, 0.3);
+}
+
+.english-badge.ielts {
+  background: linear-gradient(135deg, #2D6A4F, #52B788);
+}
+
+.english-hint {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* ============================================
    Awards
    ============================================ */
 .awards-section {
@@ -657,26 +732,8 @@ a {
   font-weight: 700;
   margin-bottom: 12px;
   letter-spacing: 0.02em;
-}
-
-.award-badge.gold {
-  background: linear-gradient(135deg, #FBF0D4, #F7E3A4);
-  color: #92700C;
-}
-
-.award-badge.silver {
-  background: linear-gradient(135deg, #E8EDF4, #D1D9E6);
-  color: #4A5568;
-}
-
-.award-badge.bronze {
-  background: linear-gradient(135deg, #FCEBD7, #F5D5B0);
-  color: #8B5E34;
-}
-
-.award-badge.special {
-  background: linear-gradient(135deg, #D6EFF8, #BEE3F8);
-  color: #1B4965;
+  background: linear-gradient(135deg, var(--accent-light), #D6EFF8);
+  color: var(--primary);
 }
 
 .award-name {
@@ -1132,6 +1189,17 @@ a {
 
   .section {
     padding: 60px 0;
+  }
+
+  /* 英语部分在中等屏幕仍保持并排 */
+  .english-grid {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 360px) {
+  .english-grid {
+    flex-direction: column;
   }
 }
 

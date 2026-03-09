@@ -68,8 +68,7 @@
         <div class="about-grid">
           <div class="about-avatar-wrapper">
             <div class="about-avatar">
-              <img src="images/avatar.jpg" alt="个人照片"
-                onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'avatar-placeholder\'>头像</div>'">
+              <img src="images/avatar.jpg" alt="个人照片" data-fallback="avatar">
             </div>
           </div>
           <div class="about-content">
@@ -101,13 +100,22 @@
                   <span class="contact-value">+86 13733627019</span>
                 </div>
               </div>
-              <div class="contact-card">
-                <span class="contact-icon">🔗</span>
-                <div>
-                  <span class="contact-label">GitHub</span>
-                  <span class="contact-value">github.com/yinmenghao</span>
+            </div>
+
+            <!-- 英语成绩 -->
+            <div class="english-section">
+              <h4 class="english-title">🌐 英语能力</h4>
+              <div class="english-grid">
+                <div class="english-card" onclick="openLightbox(this)">
+                  <div class="english-badge">CET-6</div>
+                  <img src="images/english/cet6.png" alt="英语六级成绩单" data-fallback="英语六级成绩单">
+                </div>
+                <div class="english-card" onclick="openLightbox(this)">
+                  <div class="english-badge ielts">IELTS</div>
+                  <img src="images/english/ielts.png" alt="雅思电子成绩单" data-fallback="雅思电子成绩单">
                 </div>
               </div>
+              <p class="english-hint">点击图片可放大查看</p>
             </div>
           </div>
         </div>
@@ -128,24 +136,44 @@
           <h3 class="subsection-title">🏆 获奖情况</h3>
           <div class="awards-grid">
             <div class="award-card">
-              <div class="award-badge gold">金奖</div>
-              <h4 class="award-name">XX竞赛名称</h4>
-              <p class="award-detail">2025年 · 全国总决赛</p>
+              <div class="award-badge">🏆 冠军</div>
+              <h4 class="award-name">AIR桌面赛道冠军</h4>
+              <p class="award-detail">AI + Robotics 竞赛</p>
             </div>
             <div class="award-card">
-              <div class="award-badge silver">银奖</div>
-              <h4 class="award-name">XX竞赛名称</h4>
-              <p class="award-detail">2024年 · 省级选拔赛</p>
+              <div class="award-badge">🥈 国家二等奖</div>
+              <h4 class="award-name">RM高校联盟赛</h4>
+              <p class="award-detail">RoboMaster 赛事</p>
             </div>
             <div class="award-card">
-              <div class="award-badge bronze">一等奖</div>
-              <h4 class="award-name">XX竞赛名称</h4>
-              <p class="award-detail">2024年 · 校级竞赛</p>
+              <div class="award-badge">🥈 国家二等奖</div>
+              <h4 class="award-name">RoboCup</h4>
+              <p class="award-detail">机器人世界杯</p>
             </div>
             <div class="award-card">
-              <div class="award-badge special">最佳创新</div>
-              <h4 class="award-name">XX竞赛名称</h4>
-              <p class="award-detail">2023年 · 创新创业大赛</p>
+              <div class="award-badge">🥈 国家二等奖</div>
+              <h4 class="award-name">中国机器人及人工智能</h4>
+              <p class="award-detail">apollo自动驾驶仿真算法竞赛</p>
+            </div>
+            <div class="award-card">
+              <div class="award-badge">🥉 国家三等奖</div>
+              <h4 class="award-name">FPGA创新设计竞赛</h4>
+              <p class="award-detail">FPGA 赛事</p>
+            </div>
+            <div class="award-card">
+              <div class="award-badge">🥉 国家三等奖</div>
+              <h4 class="award-name">三维数字化创新设计</h4>
+              <p class="award-detail">数字化设计竞赛</p>
+            </div>
+            <div class="award-card">
+              <div class="award-badge">🥉 国家三等奖</div>
+              <h4 class="award-name">机器人竞技赛</h4>
+              <p class="award-detail">机器人竞技专项赛</p>
+            </div>
+            <div class="award-card">
+              <div class="award-badge">🥉 全国季军</div>
+              <h4 class="award-name">道路安全竞赛</h4>
+              <p class="award-detail">道路安全创新应用</p>
             </div>
           </div>
         </div>
@@ -156,20 +184,28 @@
           <p class="subsection-hint">点击图片可放大查看</p>
           <div class="gallery-grid">
             <div class="gallery-item" onclick="openLightbox(this)">
-              <img src="images/awards/award1.jpg" alt="奖状1"
-                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 1</text></svg>'">
+              <img src="images/awards/AIR桌面赛道冠军.png" alt="AIR桌面赛道冠军" data-fallback="AIR桌面赛道冠军">
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-              <img src="images/awards/award2.jpg" alt="奖状2"
-                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 2</text></svg>'">
+              <img src="images/awards/RM高校联盟赛国家二等奖.png" alt="RM高校联盟赛国家二等奖" data-fallback="RM高校联盟赛国家二等奖">
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-              <img src="images/awards/award3.jpg" alt="奖状3"
-                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 3</text></svg>'">
+              <img src="images/awards/RoboCup国家二等奖.png" alt="RoboCup国家二等奖" data-fallback="RoboCup国家二等奖">
             </div>
             <div class="gallery-item" onclick="openLightbox(this)">
-              <img src="images/awards/award4.jpg" alt="奖状4"
-                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22><rect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/><text x=%2250%%22 y=%2250%%22 fill=%22%23718096%22 font-size=%2216%22 text-anchor=%22middle%22 dy=%22.3em%22>奖状 4</text></svg>'">
+              <img src="images/awards/中国机器人及人工智能国家二等奖 .png" alt="中国机器人及人工智能国家二等奖" data-fallback="中国机器人及人工智能国家二等奖">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/awards/FPGA国家三等奖.png" alt="FPGA国家三等奖" data-fallback="FPGA国家三等奖">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/awards/三维数字化创新设计国家三等奖.png" alt="三维数字化创新设计国家三等奖" data-fallback="三维数字化创新设计国家三等奖">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/awards/机器人竞技赛国家三等奖.png" alt="机器人竞技赛国家三等奖" data-fallback="机器人竞技赛国家三等奖">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(this)">
+              <img src="images/awards/道路安全竞赛全国季军.png" alt="道路安全竞赛全国季军" data-fallback="道路安全竞赛全国季军">
             </div>
           </div>
         </div>
@@ -187,7 +223,7 @@
               </div>
               <div class="video-info">
                 <h4 class="video-title">竞赛作品 1</h4>
-                <p class="video-desc">作品简要描述</p>
+                <p class="video-desc">基于jetson nano的麦轮小车</p>
               </div>
             </div>
             <div class="video-card">
@@ -198,7 +234,7 @@
               </div>
               <div class="video-info">
                 <h4 class="video-title">竞赛作品 2</h4>
-                <p class="video-desc">作品简要描述</p>
+                <p class="video-desc">基于stm43f407+openmv的水下机器人</p>
               </div>
             </div>
             <div class="video-card">
@@ -209,7 +245,7 @@
               </div>
               <div class="video-info">
                 <h4 class="video-title">竞赛作品 3</h4>
-                <p class="video-desc">作品简要描述</p>
+                <p class="video-desc">RoboMaster英雄机器人自瞄调试</p>
               </div>
             </div>
             <div class="video-card">
@@ -220,7 +256,7 @@
               </div>
               <div class="video-info">
                 <h4 class="video-title">竞赛作品 4</h4>
-                <p class="video-desc">作品简要描述</p>
+                <p class="video-desc">基于jetson nano的四轮差速小车</p>
               </div>
             </div>
             <div class="video-card">
@@ -231,40 +267,7 @@
               </div>
               <div class="video-info">
                 <h4 class="video-title">竞赛作品 5</h4>
-                <p class="video-desc">作品简要描述</p>
-              </div>
-            </div>
-            <div class="video-card">
-              <div class="video-wrapper">
-                <video controls preload="metadata">
-                  <source src="videos/competition/comp6.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="video-info">
-                <h4 class="video-title">竞赛作品 6</h4>
-                <p class="video-desc">作品简要描述</p>
-              </div>
-            </div>
-            <div class="video-card">
-              <div class="video-wrapper">
-                <video controls preload="metadata">
-                  <source src="videos/competition/comp7.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="video-info">
-                <h4 class="video-title">竞赛作品 7</h4>
-                <p class="video-desc">作品简要描述</p>
-              </div>
-            </div>
-            <div class="video-card">
-              <div class="video-wrapper">
-                <video controls preload="metadata">
-                  <source src="videos/competition/comp8.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="video-info">
-                <h4 class="video-title">竞赛作品 8</h4>
-                <p class="video-desc">作品简要描述</p>
+                <p class="video-desc">基于TC264的双车跟随</p>
               </div>
             </div>
           </div>
@@ -286,15 +289,27 @@
           <div class="internship-header">
             <div class="internship-icon">1</div>
             <div>
-              <h3 class="internship-company">XX公司 / 研究院</h3>
-              <p class="internship-meta">算法工程师实习 · 2025.06 - 2025.09</p>
+              <h3 class="internship-company">清华大学AIR研究院</h3>
+              <p class="internship-meta">具身智能强化营营员 · 2025.01.18 - 2025.02.28</p>
             </div>
           </div>
-          <p class="internship-desc">
-            在这里描述你的第一段实习经历。包括你的主要工作内容、
-            负责的项目、使用的技术栈以及取得的成果。
-            突出你的贡献和学到的技能。
-          </p>
+          <div class="internship-desc">
+            <p style="margin-bottom:12px;">
+              在<strong>清华大学AIR研究院（无锡）</strong>举办的首届具身智能强化营中作为营员参与<strong>桌面挑战赛</strong>，需要基于具身智能设计一项桌面级机器人 demo。
+            </p>
+            <p style="margin-bottom:8px;"><strong>🤖 技术方案：</strong>通过直接调用 API 访问
+              <strong>Qwen2-VL-72B-Instruct</strong> 实现 high-level 的 <strong>VLM 规划</strong>，下层部署了一个开源的
+              <strong>8自由度舵机小狗</strong>和一个使用乐高积木搭建的<strong>四轮差速小车</strong>。验证时，在办公桌上通过自编
+              UI 指定目标物体，两个硬件平台接收上层 VLM 输出的动作指令（标准自定义格式），通过正则解析后直接下发至客户端，实现了<strong>基于 VLM 的跨形态机器人统一控制</strong>。
+            </p>
+            <p style="margin-bottom:8px;"><strong>🧠 RL 探索：</strong>在构建 8 自由度舵机小狗硬件平台过程中，进行了
+              <strong>URDF建模 &rarr; RL训练 &rarr; MuJoCo仿真</strong> 的 real2sim
+              工作，验证了<strong>强化学习控制舵机小狗的可行性</strong>，但因摩擦系数不合理和真机硬件执行精度偏差较大，未进行 RL 的 sim2real。
+            </p>
+            <p><strong>🔧 个人负责：</strong>两个真实物理世界的<strong>硬件平台搭建</strong>、客户端
+              <strong>ROS 控制系统搭建</strong>、RL 舵机四足狗的<strong>建模和 MuJoCo 环境参数配置</strong>。
+            </p>
+          </div>
           <div class="video-grid">
             <div class="video-card">
               <div class="video-wrapper">
@@ -303,8 +318,8 @@
                 </video>
               </div>
               <div class="video-info">
-                <h4 class="video-title">项目演示 1</h4>
-                <p class="video-desc">项目简要描述</p>
+                <h4 class="video-title">真机演示 1</h4>
+                <p class="video-desc">在积木小车上的技术路线验证</p>
               </div>
             </div>
             <div class="video-card">
@@ -314,30 +329,8 @@
                 </video>
               </div>
               <div class="video-info">
-                <h4 class="video-title">项目演示 2</h4>
-                <p class="video-desc">项目简要描述</p>
-              </div>
-            </div>
-            <div class="video-card">
-              <div class="video-wrapper">
-                <video controls preload="metadata">
-                  <source src="videos/internship/intern1_3.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="video-info">
-                <h4 class="video-title">项目演示 3</h4>
-                <p class="video-desc">项目简要描述</p>
-              </div>
-            </div>
-            <div class="video-card">
-              <div class="video-wrapper">
-                <video controls preload="metadata">
-                  <source src="videos/internship/intern1_4.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="video-info">
-                <h4 class="video-title">项目演示 4</h4>
-                <p class="video-desc">项目简要描述</p>
+                <h4 class="video-title">真机演示 2</h4>
+                <p class="video-desc">在舵机小狗上的技术路线验证</p>
               </div>
             </div>
           </div>
@@ -363,7 +356,8 @@
               Policy——<strong>DiffusionPolicy</strong>、<strong>VITA</strong>、<strong>ManiFlow</strong>（DP依赖mentor现有工程复现作为入门，其余均独自完成）
             </p>
             <p style="margin-bottom:8px;"><strong>🌐 WAM：</strong>复现了 NVIDIA 的 <strong>DreamZero</strong>，直接部署在真机平台测试
-              <strong>zero-shot 效果</strong>和 <strong>LoRA 微调后效果</strong></p>
+              <strong>zero-shot 效果</strong>和 <strong>LoRA 微调后效果</strong>
+            </p>
             <p><strong>🔧
                 其他：</strong>复现了多个提升模型<strong>快、准、稳</strong>性能的项目：<strong>Aimbot</strong>、<strong>OBEYED_VLA</strong>、<strong>Dexbotic</strong>、<strong>starVLA</strong>
             </p>
@@ -376,7 +370,7 @@
                 </video>
               </div>
               <div class="video-info">
-                <h4 class="video-title">项目演示 5</h4>
+                <h4 class="video-title">demo演示 1</h4>
                 <p class="video-desc">插笔筒任务，把桌面上的笔插到笔筒内</p>
               </div>
             </div>
@@ -387,7 +381,7 @@
                 </video>
               </div>
               <div class="video-info">
-                <h4 class="video-title">项目演示 6</h4>
+                <h4 class="video-title">demo演示 2</h4>
                 <p class="video-desc">叠碗任务，把桌面上的碗叠在一起</p>
               </div>
             </div>
@@ -398,7 +392,7 @@
                 </video>
               </div>
               <div class="video-info">
-                <h4 class="video-title">项目演示 7</h4>
+                <h4 class="video-title">demo演示 3</h4>
                 <p class="video-desc">放手机任务，把手机放在手机支架上</p>
               </div>
             </div>
@@ -409,7 +403,7 @@
                 </video>
               </div>
               <div class="video-info">
-                <h4 class="video-title">项目演示 8</h4>
+                <h4 class="video-title">demo演示 4</h4>
                 <p class="video-desc">传送带夹物体任务，从移动的传送带上夹取随机出现的物块</p>
               </div>
             </div>
@@ -430,21 +424,20 @@
         <div class="research-content">
           <div class="research-intro">
             <h3 class="subsection-title">🔬 研究方向概述</h3>
+            <p class="research-text" style="margin-bottom:12px;">
+              经过两个多月的关键实习，我对 <strong>VLA（Vision-Language-Action）</strong>的研究产生了浓厚兴趣。当下 VLA
+              模型虽已具备一定智能性，但仍有<strong>大量进步空间</strong>，这让我看到了自己对这项技术有所贡献的希望。
+            </p>
+            <p class="research-text" style="margin-bottom:12px;">
+              我认为在具身智能蓬勃发展的时代，研究 VLA、不断推动其各方面性能提升是一件<strong>极具挑战且意义深远</strong>的事——很可能在短短几年内，VLA
+              或其他技术路线就能<strong>真正完美部署到真实物理世界中</strong>，并具备类人智能。
+            </p>
             <p class="research-text">
-              经过这两个多月的关键实习，我对VLA的研究深深产生了兴趣，尤其是当下VLA模型虽然有了一定的智能性但仍有大量进步空间的现况，能看到自己对这项技术有所贡献的希望。
-              我认为在当下具身智能非常火的时代，研究VLA不断推动他的各方面性能是一件很有挑战也很有意义的事，很有可能会在短短几年内
-              能看到VLA或者其他技术路线真正完美部署到真实物理世界中，并且具备“人”一样的智能性。
-              我对VLA模型的模型加速、泛化性提升、架构改进等工作中都很感兴趣，研究生阶段也非常想参与相关工作。
+              我对 VLA 模型的<strong>模型加速</strong>、<strong>泛化性提升</strong>、<strong>架构改进</strong>等方向都很感兴趣，研究生阶段非常期待参与相关工作。
             </p>
           </div>
 
-          <div class="research-plan">
-            <h3 class="subsection-title">📋 研究规划路线</h3>
-            <div class="research-image-wrapper">
-              <img src="images/research/flowchart.png" alt="研究计划流程图" class="research-image"
-                onerror="this.parentElement.innerHTML='<div class=\'image-placeholder\'><p>📊 研究计划流程图</p><p class=\'placeholder-hint\'>请将流程图放入 images/research/flowchart.png</p></div>'">
-            </div>
-          </div>
+
 
           <div class="research-goals">
             <h3 class="subsection-title">🎯 研究生期间目标（两年制）</h3>
@@ -454,7 +447,8 @@
                 <div class="goal-content">
                   <h4>基础夯实 + 核心研究启动</h4>
                   <p>
-                    完成研究生课程学习，深入阅读VLA及具身智能领域前沿文献，<strong>确定具体研究课题方向</strong>。同步开展初步实验，快速迭代研究思路，争取<strong>产出1篇高质量论文</strong>。
+                    <strong></strong>入学前</strong>参加组会旁听，了解组内师兄师姐的研究内容，<strong>提前对齐相关认知</strong>。入学后，在保证课程进度的同时，在实验室开展<strong>基础实验</strong>，在组会上汇报
+                    idea，争取在入学<strong>四个月左右</strong>启动<strong>第一篇论文</strong>相关工作。
                   </p>
                 </div>
               </div>
@@ -462,7 +456,8 @@
                 <div class="goal-phase">第二年</div>
                 <div class="goal-content">
                   <h4>深度研究 + 成果总结</h4>
-                  <p>聚焦核心研究问题，完成实验验证与算法优化，争取<strong>再发表1篇论文</strong>。整合全部研究成果，完成<strong>毕业论文撰写</strong>，参加学术会议进行成果展示。
+                  <p>
+                    基本完成课程进度，将<strong>更多时间投入科研实验</strong>，聚焦核心研究问题，完成实验验证与算法优化。力争两年内发表 <strong>3 篇以上 A 区论文</strong>。
                   </p>
                 </div>
               </div>
@@ -490,16 +485,61 @@
 
   <script src="js/main.js"></script>
   <script>
-    // 自动为所有视频提取第一帧作为封面
-    document.addEventListener('DOMContentLoaded', function () {
+    (function () {
+      // ==========================================
+      // 图片格式自动兼容 (jpg ↔ png)
+      // ==========================================
+      // 为 .jpg 和 .png 格式切换的映射
+      var altExtMap = { '.jpg': '.png', '.jpeg': '.png', '.png': '.jpg' };
+
+      function getExtension(src) {
+        var match = src.match(/\.(jpe?g|png)$/i);
+        return match ? '.' + match[1].toLowerCase() : null;
+      }
+
+      function makePlaceholderSVG(label, w, h) {
+        w = w || 400; h = h || 280;
+        return "data:image/svg+xml," + encodeURIComponent(
+          '<svg xmlns="http://www.w3.org/2000/svg" width="' + w + '" height="' + h + '">' +
+          '<rect fill="#e2e8f0" width="' + w + '" height="' + h + '" rx="8"/>' +
+          '<text x="50%" y="45%" fill="#718096" font-size="16" text-anchor="middle" dy=".3em">' + label + '</text>' +
+          '<text x="50%" y="60%" fill="#a0aec0" font-size="11" text-anchor="middle" dy=".3em">支持 .jpg / .png 格式</text>' +
+          '</svg>'
+        );
+      }
+
+      // 对所有带 data-fallback 的图片做 格式兼容
+      document.querySelectorAll('img[data-fallback]').forEach(function (img) {
+        var originalSrc = img.getAttribute('src');
+        var fallbackLabel = img.getAttribute('data-fallback');
+        var triedAlt = false;
+
+        img.addEventListener('error', function handler() {
+          var ext = getExtension(img.src);
+          // 第一次失败: 尝试另一种格式
+          if (!triedAlt && ext && altExtMap[ext]) {
+            triedAlt = true;
+            img.src = img.src.replace(/\.(jpe?g|png)$/i, altExtMap[ext]);
+            return;
+          }
+          // 两种格式都失败: 显示占位符
+          img.removeEventListener('error', handler);
+          if (fallbackLabel === 'avatar') {
+            img.style.display = 'none';
+            img.parentElement.innerHTML = '<div class="avatar-placeholder">头像</div>';
+          } else {
+            img.src = makePlaceholderSVG(fallbackLabel);
+          }
+        });
+      });
+
+      // ==========================================
+      // 自动为所有视频提取第一帧作为封面
+      // ==========================================
       document.querySelectorAll('video').forEach(function (video) {
-        // 跳过已有poster的视频
         if (video.poster && video.poster !== '' && !video.poster.endsWith('/')) return;
-
         video.preload = 'metadata';
-
         video.addEventListener('loadeddata', function () {
-          // 在视频加载后capture第一帧
           try {
             var canvas = document.createElement('canvas');
             canvas.width = video.videoWidth;
@@ -507,12 +547,10 @@
             var ctx = canvas.getContext('2d');
             ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
             video.poster = canvas.toDataURL('image/jpeg', 0.8);
-          } catch (e) {
-            // 跨域或其他错误时静默忽略
-          }
+          } catch (e) { }
         }, { once: true });
       });
-    });
+    })();
   </script>
 </body>
 

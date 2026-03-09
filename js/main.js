@@ -60,7 +60,8 @@ function initScrollAnimations() {
   const elements = document.querySelectorAll(
     '.award-card, .video-card, .internship-block, .contact-card, ' +
     '.gallery-item, .goal-item, .research-intro, .research-plan, ' +
-    '.research-goals, .about-grid, .awards-section, .videos-section'
+    '.research-goals, .about-grid, .awards-section, .videos-section, ' +
+    '.english-card, .english-section'
   );
 
   elements.forEach(el => el.classList.add('fade-in'));
